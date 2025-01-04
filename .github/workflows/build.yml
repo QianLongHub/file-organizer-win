@@ -3,12 +3,14 @@ name: Build Windows Application
 on:
   push:
     branches: [ main ]
+    tags:
+      - 'v*'  # Push events to matching v*, i.e. v1.0, v20.15.10
   pull_request:
     branches: [ main ]
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write  # Required for creating releases
 
 jobs:
   build:
@@ -33,8 +35,23 @@ jobs:
       run: |
         pyinstaller --clean file_organizer.spec
     
+    - name: Create Release ZIP
+      run: |
+        cd dist
+        7z a -tzip 文件整理工具-Windows.zip 文件整理工具/
+      shell: pwsh
+    
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: 文件整理工具-Windows
-        path: dist/文件整理工具/ 
+        path: dist/文件整理工具/
+    
+    - name: Create Release
+      if: startsWith(github.ref, 'refs/tags/')
+      uses: softprops/action-gh-release@v1
+      with:
+        files: dist/文件整理工具-Windows.zip
+        draft: false
+        prerelease: false
+        generate_release_notes: true 
