@@ -29,7 +29,7 @@
 
 1. 克隆仓库
 ```bash
-git clone https://github.com/yourusername/my-file-organizer.git
+git clone https://github.com/QianLongHub/my-file-organizer.git
 cd my-file-organizer
 ```
 
