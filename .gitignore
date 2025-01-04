@@ -24,7 +24,8 @@ wheels/
 build/
 dist/
 *.manifest
-*.spec
+# Keep our spec file
+# *.spec
 
 # Environments
 .env
