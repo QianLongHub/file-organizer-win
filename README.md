@@ -29,8 +29,8 @@
 
 1. 克隆仓库
 ```bash
-git clone https://github.com/yourusername/file-organizer.git
-cd file-organizer
+git clone https://github.com/yourusername/my-file-organizer.git
+cd my-file-organizer
 ```
 
 2. 安装依赖
@@ -47,7 +47,7 @@ python app.py
 
 ## 在线使用
 
-访问：[文件整理工具](https://your-vercel-url.vercel.app)
+访问：[文件整理工具](https://my-file-organizer.vercel.app)
 
 ## 贡献
 
