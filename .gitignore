@@ -4,7 +4,6 @@ __pycache__/
 *$py.class
 *.so
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -20,16 +19,19 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+
+# PyInstaller
+build/
+dist/
+*.manifest
+*.spec
+
+# Environments
 .env
 .venv
+env/
 venv/
 ENV/
-
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-._*
 
 # IDE
 .idea/
@@ -37,5 +39,6 @@ ENV/
 *.swp
 *.swo
 
-# 项目特定
-整理_*/ 
+# OS
+.DS_Store
+Thumbs.db 

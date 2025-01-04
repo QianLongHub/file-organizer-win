@@ -1,57 +1,69 @@
 # 文件整理工具
 
-一个简单易用的文件整理工具，可以帮助您快速整理文件夹中的文件。
+一个简单实用的文件整理工具，帮助你自动整理文件夹中的各类文件。
 
 ## 功能特点
 
-- 自动整理文件夹中的所有文件
-- 按日期和文件类型重命名文件
-- 直观的步骤引导界面
-- 实时进度显示
-- 支持多种文件类型
-- 美观的用户界面
+- 自动识别并分类常见文件类型
+- 支持图片、文档、音频、视频、压缩包等多种文件格式
+- 简洁直观的图形界面
+- 实时显示整理进度
+- 可以随时取消整理操作
+- 支持自定义文件存放位置
+
+## 支持的文件类型
+
+- 图片：jpg, jpeg, png, gif, bmp, tiff, webp
+- 文档：doc, docx, pdf, txt, rtf, odt, xls, xlsx, ppt, pptx
+- 音频：mp3, wav, flac, m4a, aac, wma
+- 视频：mp4, avi, mkv, mov, wmv, flv
+- 压缩包：zip, rar, 7z, tar, gz
+- 代码文件：py, java, cpp, html, css, js
 
 ## 使用方法
 
-1. 点击"选择源文件夹"按钮，选择需要整理的文件夹
-2. 点击"开始整理"按钮，等待处理完成
-3. 选择整理后文件的存放位置
-4. 完成后可以点击"重新开始"进行新的整理任务
+1. 运行程序
+2. 点击"选择源文件夹"按钮选择需要整理的文件夹
+3. 点击"开始整理"按钮
+4. 等待程序扫描并分析文件
+5. 查看整理结果
+6. 点击"选择存放位置"按钮选择文件存放位置
+7. 等待文件移动完成
 
-## 技术栈
+## 下载
 
-- 前端：HTML, CSS, JavaScript
-- 后端：Python, Flask
-- UI 框架：Bootstrap 5
-- 动画：Animate.css
+你可以从 [Releases](../../releases) 页面下载最新版本的程序。
 
-## 本地开发
+## 开发环境
 
-1. 克隆仓库
+- Python 3.10
+- tkinter (GUI库)
+- PyInstaller (打包工具)
+
+## 构建说明
+
+如果你想自己构建程序：
+
+1. 克隆仓库：
 ```bash
-git clone https://github.com/QianLongHub/my-file-organizer.git
-cd my-file-organizer
+git clone https://github.com/YOUR_USERNAME/file-organizer.git
+cd file-organizer
 ```
 
-2. 安装依赖
+2. 安装依赖：
 ```bash
 pip install -r requirements.txt
 ```
 
-3. 运行应用
+3. 运行程序：
 ```bash
-python app.py
+python main.py
 ```
 
-4. 访问 http://localhost:8080
-
-## 在线使用
-
-访问：[文件整理工具](https://my-file-organizer.vercel.app)
-
-## 贡献
-
-欢迎提交 Issue 和 Pull Request！
+4. 构建可执行文件：
+```bash
+pyinstaller --clean file_organizer.spec
+```
 
 ## 许可证
 
